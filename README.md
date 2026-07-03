@@ -96,7 +96,7 @@ physiological-signal-ml/
 ## Setup
 
 ```bash
-git clone https://github.com/ranga231/physiological-signal-ml
+git clone https://github.com/ranganarayan/physiological-signal-ml
 cd physiological-signal-ml
 pip install -r requirements.txt
 
