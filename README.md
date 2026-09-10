@@ -13,8 +13,10 @@ All models use the same 6-channel input (BVP, ACC xyz, TEMP, EDA) and identical 
 | Model | Mean F1 | Std | AUC-ROC |
 |---|---|---|---|
 | Random Forest (34 handcrafted features) | 0.831 | 0.292 | 0.953 |
-| 1D CNN (raw signals, 6ch) | 0.882 | 0.240 | 0.956 |
-| Patch-based Transformer (raw signals, 6ch) | 0.893 | 0.211 | — |
+| 1D CNN (raw signals, 6ch) | 0.897 | 0.218 | 0.943 |
+| Patch-based Transformer (raw signals, 6ch) | 0.893 | 0.211 | 0.945 |
+
+The CNN and Transformer are statistically indistinguishable (exact Wilcoxon signed-rank on paired per-subject F1: W=14, p=1.00); both outperform RF (RF vs. Transformer p=0.021; RF vs. CNN p=0.057). Bootstrap 95% CIs for mean F1: RF [0.662, 0.952], CNN [0.770, 0.987], Transformer [0.774, 0.985].
 
 ### CNN Channel Ablation
 
